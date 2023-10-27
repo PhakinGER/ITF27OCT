@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        function setName (){
+            const nameField = document.getElementById("username");
+            const name = nameField.value;
+            const title = document.getElementById("profile-link");
+            title.innerText = name + "Profile";
+        }
+
+        function setImage(){
+            const profileImage = document.getElementById("profileImage");
+            const changeImage = document.getElementById("imageURL");
+            console.log(changeImage)
+            profileImage.style.backgroundImage = "url("+changeImage.value+")"
+        }
+
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="parent" id="profileImage">
+            <div class="child"></div>
+        </div>
+        <a id="profile-link" href="">Phakin Phansook</a>
+        <div class="row">
+            <p>set profile name</p>
+            <input id="username" type="text">
+            <button onclick="setName()">Click me!</button>
+        </div>
+        <div class="row">
+            <p>set profile picture</p>
+            <input id="imageURL" type="text">
+            <button onclick="setImage()">Click me!</button>
+        </div>
+        <div class="gallery">
+            <div class="image"></div>
+            <div id="extend-col2" class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+        </div>
+    </main>
+</body>
+</html>
